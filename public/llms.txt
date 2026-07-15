@@ -1,0 +1,27 @@
+# Mohammed Mufeed - AI/ML & Full Stack Developer
+
+## Overview
+Mohammed Mufeed is an AI/ML & Full Stack Developer who specializes in building intelligent applications, machine learning/deep learning pipelines, NLP, and modern full-stack web applications.
+
+## Links
+
+### Personal Information
+- [Mohammed Mufeed](https://mohhdmufeed.github.io/): <A brief introduction to Mohammed Mufeed, highlighting his AI/ML expertise and software development focus.>
+
+### Projects
+- [Projects](https://mohhdmufeed.github.io/projects): <A showcase of AI/ML and web projects developed by Mohammed Mufeed, demonstrating his skills and experience.>
+
+### Open Source Contributions
+- [Open Source](https://mohhdmufeed.github.io/open-source): <Details about open source contributions and collaboration with the developer community.>
+
+- [Experience](https://mohhdmufeed.github.io/experience): <An overview of education, hackathons, and software engineering background.>
+
+### Technical Stack
+- [Stack](https://mohhdmufeed.github.io/stack): <A detailed list of technologies, databases, and AI frameworks that Mohammed Mufeed uses.>
+
+### Contact Information
+- [Contact Me](https://mohhdmufeed.github.io/contact): <Information on how to get in touch with Mohammed Mufeed for collaborations or inquiries.>
+
+### Additional Links
+- [GitHub Profile](https://github.com/mohhdmufeed): <A link to Mohammed Mufeed's GitHub repositories.>
+- [Resume](https://mohhdmufeed.github.io/resume.pdf): <A link to Mohammed Mufeed's resume PDF.>
