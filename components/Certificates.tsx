@@ -65,7 +65,19 @@ const Certificates = () => {
                                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         />
                                     ) : (
-                                        <IconAward className="w-16 h-16 text-zinc-700" />
+                                        <div className="flex flex-col items-center justify-center p-4 w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-950 border-[4px] border-double border-zinc-800/80 group-hover:border-violet-500/30 transition-colors duration-500">
+                                            <IconAward className="w-8 h-8 text-violet-500/80 mb-2 group-hover:scale-110 transition-transform duration-500" />
+                                            <span className="text-[8px] uppercase tracking-widest text-zinc-500 font-bold text-center mb-1">
+                                                Certificate of Completion
+                                            </span>
+                                            <div className="w-12 h-[1px] bg-violet-500/30 my-1" />
+                                            <span className="text-[10px] font-semibold text-zinc-300 text-center leading-tight line-clamp-2 px-2 group-hover:text-violet-200 transition-colors duration-300">
+                                                {cert.title}
+                                            </span>
+                                            <span className="text-[8px] text-zinc-500 mt-2">
+                                                {cert.issuer}
+                                            </span>
+                                        </div>
                                     )}
                                 </div>
 
