@@ -33,7 +33,7 @@ export type Experience = {
     id: string;
     company: string;
     role: string;
-    type: 'fulltime' | 'contract' | 'freelance' | 'internship';
+    type: 'fulltime' | 'contract' | 'freelance' | 'internship' | 'parttime';
     duration: {
         start: string;
         end: string | 'Present';
@@ -88,7 +88,7 @@ export type TimelineEntry = {
         end: string | 'Present';
     };
     description: string;
-    type: 'fulltime' | 'contract' | 'freelance' | 'internship';
+    type: 'fulltime' | 'contract' | 'freelance' | 'internship' | 'parttime';
 };
 
 export type ChartDataType = {
