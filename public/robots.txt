@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mohhdmufeed.github.io
+
+# Sitemaps
+Sitemap: https://mohhdmufeed.github.io/sitemap.xml
