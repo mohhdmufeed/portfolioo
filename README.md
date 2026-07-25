@@ -12,7 +12,7 @@
 
 A modern, interactive portfolio website featuring 3D elements, smooth animations, and a premium dark-mode design — built to showcase my projects, skills, certifications, and professional experience.
 
-[**🌐 Live Demo**](https://mohhdmufeed.vercel.app) · [**📧 Contact**](mailto:mohhdmufeed@gmail.com) · [**💼 LinkedIn**](https://linkedin.com/in/mohhdmufeed)
+[**🌐 Live Demo**](https://portfolioo.vercel.app) · [**📧 Contact**](mailto:mohhdmufeed@gmail.com) · [**💼 LinkedIn**](https://linkedin.com/in/mohhdmufeed)
 
 </div>
 
