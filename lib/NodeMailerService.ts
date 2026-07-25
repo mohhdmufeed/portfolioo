@@ -1,8 +1,13 @@
 import nodemailer from "nodemailer";
-const { NODEMAILER_PASSKEY, SENDER_EMAIL, RECEIVER_EMAIL } = process.env;
 
 export default class NodeMailerService {
     async sendMail(name: string, contact: string, content: string): Promise<void> {
+        const { NODEMAILER_PASSKEY, SENDER_EMAIL, RECEIVER_EMAIL } = process.env;
+
+        if (!SENDER_EMAIL || !NODEMAILER_PASSKEY || !RECEIVER_EMAIL) {
+            throw new Error("Email credentials are not configured in environment variables.");
+        }
+
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -14,12 +19,12 @@ export default class NodeMailerService {
         const mailOptions = {
             from: SENDER_EMAIL,
             to: RECEIVER_EMAIL,
-            subject: "New Message from Your Portfolio",
+            subject: `New Message from Portfolio: ${name}`,
             text: `
-            Name: ${name}
-            Contact: ${contact}
-            Message:
-            ${content}
+Name: ${name}
+Contact: ${contact}
+Message:
+${content}
             `,
             html: `
                 <h3>New Message from Your Portfolio</h3>

@@ -15,19 +15,42 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [contactInfo, setContactInfo] = useState('');
   const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent Successfully! 🎉",
-      description: "Thank you for reaching out! I'll get back to you soon. 😊👍",
-      variant: "success",
-      duration: 5000,
-    });
-    await submitMessage(name, contactInfo, message);
-    setName('');
-    setContactInfo('');
-    setMessage('');
+    setIsSubmitting(true);
+    
+    try {
+      const res = await submitMessage(name, contactInfo, message);
+      if (res?.success) {
+        toast({
+          title: "Message Sent Successfully! 🎉",
+          description: "Thank you for reaching out! I'll get back to you soon. 😊👍",
+          variant: "success",
+          duration: 5000,
+        });
+        setName('');
+        setContactInfo('');
+        setMessage('');
+      } else {
+        toast({
+          title: "Failed to Send Message ❌",
+          description: res?.error || "Something went wrong. Please check back later.",
+          variant: "destructive",
+          duration: 6000,
+        });
+      }
+    } catch {
+      toast({
+        title: "Error ❌",
+        description: "An unexpected error occurred while sending your message.",
+        variant: "destructive",
+        duration: 6000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }, [contactInfo, message, name]);
 
   return (
@@ -119,9 +142,10 @@ const Contact = () => {
         >
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 py-4 sm:py-5 md:py-6 relative overflow-hidden group text-sm sm:text-base"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 py-4 sm:py-5 md:py-6 relative overflow-hidden group text-sm sm:text-base disabled:opacity-50"
           >
-            <span className="relative z-10">Send Message</span>
+            <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             <Image
               src="/assets/icons/send.svg"
