@@ -88,8 +88,8 @@ A modern, interactive portfolio website featuring 3D elements, smooth animations
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/mohhdmufeed/portfolio.git
-   cd portfolio
+   git clone https://github.com/mohhdmufeed/portfolioo.git
+   cd portfolioo
    ```
 
 2. **Install dependencies:**
@@ -99,11 +99,11 @@ A modern, interactive portfolio website featuring 3D elements, smooth animations
 
 3. **Set up environment variables:**
 
-   Create a `.env` file in the root directory:
+   Create a `.env.local` file in the root directory (you can copy `.env.example`):
    ```env
-   SENDER_EMAIL=your_email@example.com
-   NODEMAILER_PASSKEY=your_nodemailer_password
-   RECEIVER_EMAIL=recipient_email@example.com
+   SENDER_EMAIL=your_sender_email@gmail.com
+   NODEMAILER_PASSKEY=your_16_character_google_app_password
+   RECEIVER_EMAIL=your_destination_email@gmail.com
    NEXT_PUBLIC_GITHUB_TOKEN=your_github_api_token
    ```
 
